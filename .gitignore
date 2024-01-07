@@ -1,0 +1,9 @@
+/*
+!public
+!source
+!.eslintrc.cjs
+!.gitignore
+!package-lock.json
+!package.json
+!readme.md
+!vite.config.js
