@@ -12,12 +12,15 @@ import {
   blueColored,
   pinkColored,
   coralColored,
+  card_container,
+  test
 } from "./app.module.css";
 import logoName from "/logo-name.svg";
 import logo from "/logo.svg";
 import upload from "/upload.svg";
 import style from "../../public/style.svg";
 import match from "../../public/match.svg";
+import mobile from "../../public/mobile.png";
 
 export function App() {
   const [pageScrolled, setPageScrolled] = useState(false);
@@ -50,15 +53,17 @@ export function App() {
       </div>
 
       {/* second section */}
+      <div className={test}>
+        <img src={mobile}></img>
+        <div>
+          <p className={`${blueColored} ${heading}`}>The Future of Home Search</p>
+          <p style={{fontSize: '2rem'}}>Search any element in a real estate listing using AI & Computer Vision.</p>
+        </div>
+      </div>
+
+      {/* third section */}
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          maxWidth: 1500,
-          margin: "0 auto",
-          minHeight: 500,
-          gap: "1rem",
-        }}
+      className={card_container}
       >
         <div
           style={{
