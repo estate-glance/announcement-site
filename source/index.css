@@ -1,22 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+:root {
+  --smallSpacing: 0.5rem;
+  --mediumSpacing: 1rem;
+  --fontFamily: "Quicksand", sans-serif;
+  --interfaceFontSize: 1rem;
+  --boldFontWeight: 700;
+  --mutedInterfaceColor: #d9d9d9;
+  --mutedFontColor: #848484;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
-}
-
-:root {
-  --spacing: 1rem;
-  --headerHeight: min(5rem, 10vh);
-  --transitionSpeed: 0.25s;
-  --blue: #3d5a80;
-  --pink: #fdbfab;
-  --coral: #fa8072;
-  --headingFontSize: clamp(2rem, 4vw, 5vw);
-}
-
-#root {
-  height: 100vh;
+  font-family: var(--fontFamily);
 }

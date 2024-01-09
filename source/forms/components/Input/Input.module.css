@@ -1,0 +1,17 @@
+._label {
+  font-weight: var(--boldFontWeight);
+}
+
+.input {
+  --padding: var(--mediumSpacing);
+  display: block;
+  margin-top: var(--smallSpacing);
+  border: 1px solid var(--mutedInterfaceColor);
+  padding: var(--padding);
+  font-size: var(--interfaceFontSize);
+  border-radius: calc(2 * var(--padding) + var(--interfaceFontSize));
+}
+
+.input::placeholder {
+  color: var(--mutedFontColor);
+}
