@@ -9,8 +9,12 @@ import match from "/match.svg";
 function ButtonGroup({ className }) {
   return (
     <div className={className}>
-      <button className={styles.borderButton}>Contact</button>
-      <button className={styles.filledButton}>Sign Up</button>
+      <a href="#contactForm" className={styles.borderButton}>
+        Contact
+      </a>
+      <a href="#signUpForm" className={styles.filledButton}>
+        Sign Up
+      </a>
     </div>
   );
 }
@@ -54,7 +58,9 @@ function MobileSection() {
             Search any element in a real estate listing using AI & Computer
             Vision.
           </p>
-          <button className={styles.filledButton}>Join our waitlist</button>
+          <a href="#signUpForm" className={styles.filledButton}>
+            Join our waitlist
+          </a>
         </div>
         <img src={mobile} className={styles.mobileImage} />
       </div>
@@ -107,6 +113,109 @@ function InfoSection() {
   );
 }
 
+function TextBox({ label, placeholder, type, area }) {
+  const InputType = area ? "textarea" : "input";
+  return (
+    <label className={styles._label}>
+      {label}
+      <InputType
+        className={styles.textBox}
+        placeholder={placeholder}
+        type={type}
+        rows={5}
+      />
+    </label>
+  );
+}
+
+function SignUpForm() {
+  return (
+    <div className={styles.signUpForm} id="signUpForm">
+      <p className={styles.formTitle}>Sign up to join PinHous waitlist!</p>
+      <div className={styles.formControls}>
+        <TextBox label="Email" placeholder="Enter your email id" type="email" />
+        <TextBox
+          label="Password"
+          placeholder="Create a password"
+          type="password"
+        />
+      </div>
+      <div className={styles.formButtonGroup}>
+        <button className={styles.filledButton}>Sign Up</button>
+        <button className={styles.borderButton}>Continue with Google</button>
+      </div>
+    </div>
+  );
+}
+
+function ProfessionDropdown() {
+  return (
+    <label className={styles._label}>
+      Profession
+      <select
+        style={{
+          padding: "1rem",
+          display: "block",
+          marginTop: "0.5rem",
+          border: "1px solid #d9d9d9",
+          width: "100%",
+          borderRadius: 99,
+        }}
+      >
+        <option defaultValue={true} disabled>
+          Select
+        </option>
+        <option>Agent</option>
+        <option>Homebuyer</option>
+      </select>
+    </label>
+  );
+}
+
+function ContactForm() {
+  return (
+    <div className={styles.contactForm} id="contactForm">
+      <p className={styles.formTitle}>Contact</p>
+      <div className={styles.contactFormLayout}>
+        <TextBox label="First Name" placeholder="Enter your first name" />
+        <TextBox label="Last Name" placeholder="Enter your last name" />
+        <TextBox label="Email" placeholder="Enter your email id" type="email" />
+        <ProfessionDropdown />
+      </div>
+      <TextBox
+        label="Enquiry"
+        placeholder="Write your message here"
+        area={true}
+      />
+      <div className={styles.formButtonGroup}>
+        <button className={styles.filledButton}>Send message</button>
+      </div>
+    </div>
+  );
+}
+
+function FormSection() {
+  return (
+    <div className={styles.formPage}>
+      <div className={styles.formContainer}>
+        <SignUpForm />
+        <hr className={styles.separator} />
+        <ContactForm />
+      </div>
+    </div>
+  );
+}
+
+function HiddenFormSection() {
+  return (
+    <div className={style.contactPage}>
+      <ContactForm />
+    </div>
+  );
+}
+
+// add hidden page with contact form
+
 export function App() {
   return (
     <>
@@ -114,6 +223,8 @@ export function App() {
       <HeroSection />
       <MobileSection />
       <InfoSection />
+      <FormSection />
+      <HiddenFormSection />
     </>
   );
 }

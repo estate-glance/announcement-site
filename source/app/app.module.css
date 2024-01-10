@@ -9,6 +9,8 @@
   padding: var(--mediumSpacing);
   font-size: var(--h4FontSize);
   font-weight: var(--b1FontWeight);
+  text-align: center;
+  text-decoration: none;
 }
 
 .page {
@@ -195,6 +197,104 @@
 }
 /**********************************/
 
+/* form section */
+.formPage {
+  composes: page;
+  background-image: url("../../public/hero-desktop-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  /* backdrop-filter: brightness(64%); */
+}
+
+.formContainer {
+  /* composes: widthLimited; */
+  max-width: min(100%, 1000px);
+  height: 50%;
+  /* border: 1px solid red; */
+  background: white;
+  border-radius: 12px;
+  margin: auto;
+  padding: var(--mediumSpacing);
+  display: flex;
+  gap: var(--mediumSpacing);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: var(--mediumSpacing);
+}
+
+.formTitle {
+  font-size: var(--h2FontSize);
+  font-weight: var(--b1FontWeight);
+}
+
+.formButtonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mediumSpacing);
+}
+
+.formControls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mediumSpacing);
+}
+
+._label {
+  font-weight: 500;
+}
+
+.control {
+  display: block;
+  border-radius: 99px;
+  margin-top: var(--smallSpacing);
+  border: 1px solid #d9d9d9;
+  width: 100%;
+}
+
+.textBox {
+  composes: control;
+  padding: var(--mediumSpacing);
+}
+
+.textBox::placeholder {
+  color: #d9d9d9;
+}
+
+.contactFormLayout {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--mediumSpacing);
+}
+
+.separator {
+  opacity: 0.32;
+}
+
+.contactForm {
+  composes: form;
+  width: 100%;
+}
+
+.signUpForm {
+  composes: form;
+  max-width: 40%;
+}
+
+.contactPage {
+  composes: page;
+  visibility: hidden;
+  background: #fdbfab;
+}
+
+/**********************************/
+
 /* mobile breakpoint */
 @media (max-width: 900px) {
   .headerButtonContainer {
@@ -247,17 +347,42 @@
   .infoCard {
     flex-direction: row;
     max-height: 20vh;
-    /* gap */
-    /* border: 1px solid red; */
   }
 
   .infoCardImage {
-    /* width: unset; */
     max-height: 20vh;
   }
 
   .infoCardText {
     text-align: left;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .contactFormLayout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contactForm {
+    display: none;
+  }
+
+  .signUpForm {
+    max-width: unset;
+  }
+
+  .formContainer {
+    height: unset;
+  }
+
+  .formPage {
+    background-image: url("../../public/hero-mobile-bg.png");
+  }
+
+  .contactPage {
+    visibility: visible;
   }
 }
 /**********************************/
