@@ -2,6 +2,9 @@ import styles from "./App.module.css";
 import logo from "/logo.svg";
 import fullLogo from "/logo-name.svg";
 import mobile from "/mobile.png";
+import upload from "/upload.svg";
+import style from "/style.svg";
+import match from "/match.svg";
 
 function ButtonGroup({ className }) {
   return (
@@ -59,12 +62,58 @@ function MobileSection() {
   );
 }
 
+function InfoCard({ image, title, description, color }) {
+  return (
+    <div className={styles.infoCard}>
+      <img src={image} className={styles.infoCardImage}></img>
+      <div className={styles.infoCardText}>
+        <p style={{ color: color }}>{title}</p>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
+
+function InfoSection() {
+  return (
+    <div className={styles.infoPage}>
+      <div className={styles.infoContainer}>
+        <div className={styles.infoPrelude}>
+          <p>OUR PROCESS</p>
+          <p>This is how PinHouse fetches you homes!</p>
+        </div>
+        <div className={styles.infoCardContainer}>
+          <InfoCard
+            image={upload}
+            title="Upload"
+            description="Include images of the homes you love in your home search"
+            color="#fa8072"
+          />
+          <InfoCard
+            image={style}
+            title="Style"
+            description="Filter by features, amenities, lighting, and architectural styles. Search anything."
+            color="#3d5a80"
+          />
+          <InfoCard
+            image={match}
+            title="Match"
+            description="Rank family priorities and see top % matches"
+            color="#fdbfab"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function App() {
   return (
     <>
       <Header />
       <HeroSection />
       <MobileSection />
+      <InfoSection />
     </>
   );
 }

@@ -13,6 +13,7 @@
 
 .page {
   height: calc(100vh - var(--headerHeight));
+  padding: var(--mediumSpacing);
 }
 
 .buttonContainer {
@@ -106,7 +107,6 @@
 .mobilePage {
   composes: page;
   background: #fdbfab;
-  padding: var(--mediumSpacing);
 }
 
 .mobileContainer {
@@ -123,6 +123,8 @@
   flex-direction: column;
   max-width: max(25%, 38ch);
   gap: var(--mediumSpacing);
+  align-self: flex-end;
+  margin-bottom: 25%;
 }
 
 .mobileContentHeading {
@@ -137,6 +139,59 @@
 
 .mobileImage {
   height: 100%;
+}
+/**********************************/
+
+/* info section */
+.infoPage {
+  composes: page;
+}
+
+.infoContainer {
+  composes: widthLimited;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  text-align: center;
+}
+
+.infoPrelude {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mediumSpacing);
+}
+
+.infoPrelude p:nth-child(2) {
+  font-size: var(--h3FontSize);
+  font-weight: var(--b1FontWeight);
+}
+
+.infoCardContainer {
+  display: flex;
+  width: 100%;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--mediumSpacing);
+  flex: 1;
+}
+
+.infoCardImage {
+  width: 50%;
+}
+
+.infoCardText p:nth-child(1) {
+  font-size: var(--h3FontSize);
+  font-weight: var(--b1FontWeight);
+  margin-bottom: var(--smallSpacing);
 }
 /**********************************/
 
@@ -174,7 +229,35 @@
   }
 
   .mobileContent {
+    align-self: center;
     text-align: center;
     order: 2;
   }
+
+  .infoContainer {
+    gap: 10%;
+  }
+
+  .infoCardContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
+  }
+
+  .infoCard {
+    flex-direction: row;
+    max-height: 20vh;
+    /* gap */
+    /* border: 1px solid red; */
+  }
+
+  .infoCardImage {
+    /* width: unset; */
+    max-height: 20vh;
+  }
+
+  .infoCardText {
+    text-align: left;
+  }
 }
+/**********************************/
