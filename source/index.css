@@ -1,13 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 :root {
-  --smallSpacing: 0.5rem;
-  --mediumSpacing: 1rem;
   --fontFamily: "Quicksand", sans-serif;
-  --interfaceFontSize: 1rem;
-  --boldFontWeight: 700;
-  --mutedInterfaceColor: #d9d9d9;
-  --mutedFontColor: #848484;
+  --headerHeight: min(8rem, 10vh);
+  --widthLimit: 1500px;
+  --mediumSpacing: 1rem;
+  --h1FontSize: 4rem;
+  --h2FontSize: 3rem;
+  --h3FontSize: 2rem;
+  --h4FontSize: 1rem;
+  --b1FontWeight: 700;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --h1FontSize: 2rem;
+  }
 }
 
 * {
