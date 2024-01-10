@@ -5,13 +5,15 @@ import mobile from "/mobile.png";
 import upload from "/upload.svg";
 import style from "/style.svg";
 import match from "/match.svg";
+import google from "../../public/google.svg";
+import linkedin from "../../public/linkedin.png";
 
 function ButtonGroup({ className }) {
   return (
     <div className={className}>
-      <a href="#contactForm" className={styles.borderButton}>
+      {/* <a href="#contactForm" className={styles.borderButton}>
         Contact
-      </a>
+      </a> */}
       <a href="#signUpForm" className={styles.filledButton}>
         Sign Up
       </a>
@@ -21,7 +23,7 @@ function ButtonGroup({ className }) {
 
 function Header() {
   return (
-    <div className={styles.header}>
+    <div className={styles.header} id="header">
       <div className={styles.headerContainer}>
         <img src={fullLogo} className={styles.headerLogo} />
         <ButtonGroup className={styles.headerButtonContainer} />
@@ -142,7 +144,14 @@ function SignUpForm() {
       </div>
       <div className={styles.formButtonGroup}>
         <button className={styles.filledButton}>Sign Up</button>
-        <button className={styles.borderButton}>Continue with Google</button>
+        <button className={styles.borderButton}>
+          <div
+            style={{ display: "flex", gap: "1rem", justifyContent: "center" }}
+          >
+            <img src={google} />
+            <p>Continue with Google</p>
+          </div>
+        </button>
       </div>
     </div>
   );
@@ -199,17 +208,39 @@ function FormSection() {
     <div className={styles.formPage}>
       <div className={styles.formContainer}>
         <SignUpForm />
-        <hr className={styles.separator} />
-        <ContactForm />
+        {/* <hr className={styles.separator} />
+        <ContactForm /> */}
       </div>
     </div>
   );
 }
 
-function HiddenFormSection() {
+function SocialButton({ img, link }) {
   return (
-    <div className={style.contactPage}>
-      <ContactForm />
+    <a className={styles.socialButton} href={link}>
+      <img src={img} />
+    </a>
+  );
+}
+
+function Footer() {
+  return (
+    <div className={styles.footer}>
+      <div className={styles.branding}>
+        <img src={fullLogo}></img>
+        <p>Copyright © 2024 Estate Glance inc</p>
+        <p>All Rights Reserved</p>
+      </div>
+
+      <div className={styles.socials}>
+        <p>Follow us</p>
+        <div className={styles.socialButtons}>
+          <SocialButton
+            img={linkedin}
+            link="https://www.linkedin.com/company/pinhous/"
+          />
+        </div>
+      </div>
     </div>
   );
 }
@@ -224,7 +255,7 @@ export function App() {
       <MobileSection />
       <InfoSection />
       <FormSection />
-      <HiddenFormSection />
+      <Footer />
     </>
   );
 }

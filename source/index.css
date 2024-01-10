@@ -27,3 +27,7 @@
   padding: 0;
   font-family: var(--fontFamily);
 }
+
+html {
+  scroll-behavior: smooth;
+}
