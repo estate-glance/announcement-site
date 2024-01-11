@@ -1,4 +1,4 @@
-import styles from "./App.module.css";
+import styles from "./app.module.css";
 import logo from "/logo.svg";
 import fullLogo from "/logo-name.svg";
 import mobile from "/mobile.png";

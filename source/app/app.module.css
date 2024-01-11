@@ -28,6 +28,15 @@
   display: flex;
   gap: var(--mediumSpacing);
 }
+
+/* .bottom_shadowed {
+  box-shadow: 0px 4px 4px -2px #fdbfab;
+} */
+
+.shadowed {
+  box-shadow: 0 0 16px -2px #fdbfab;
+}
+
 /**********************************/
 
 /* general */
@@ -44,10 +53,12 @@
   background: #fa8072;
   border: none;
 }
+
 /**********************************/
 
 /* header */
 .header {
+  composes: shadowed;
   height: var(--headerHeight);
   position: sticky;
   top: 0;
@@ -71,6 +82,7 @@
   composes: buttonContainer;
   margin-left: auto;
 }
+
 /**********************************/
 
 /* hero section */
@@ -85,6 +97,7 @@
 }
 
 .heroContent {
+  /* composes: shadowed; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,6 +122,7 @@
   composes: buttonContainer;
   display: none;
 }
+
 /**********************************/
 
 /* mobile section */
@@ -148,6 +162,7 @@
 .mobileImage {
   height: 100%;
 }
+
 /**********************************/
 
 /* info section */
@@ -158,7 +173,6 @@
 .infoContainer {
   composes: widthLimited;
   margin: 0 auto;
-  /* border: 1px solid red; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -201,6 +215,7 @@
   font-weight: var(--b1FontWeight);
   margin-bottom: var(--smallSpacing);
 }
+
 /**********************************/
 
 /* form section */
@@ -218,6 +233,7 @@
   /* max-width: min(100%, 1000px); */
   /* height: 50%; */
   /* border: 1px solid red; */
+  composes: shadowed;
   max-width: min(100%, 500px);
   background: white;
   border-radius: 12px;
@@ -349,6 +365,7 @@
   display: flex;
   justify-content: center;
 }
+
 /**********************************/
 
 /* mobile breakpoint */
@@ -397,20 +414,29 @@
   .infoCardContainer {
     flex-direction: column;
     align-items: center;
-    gap: 10%;
+    padding: var(--mediumSpacing);
+    /* border: 1px solid red; */
+    /* gap: 10%; */
   }
 
   .infoCard {
-    flex-direction: row;
-    max-height: 20vh;
+    /* flex-direction: row;
+    justify-content: space-between; */
+    width: 100%;
+    /* width: 100%; */
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-columns: 40% 60%;
   }
 
   .infoCardImage {
-    max-height: 20vh;
+    /* border: 1px solid green; */
+    height: 20vh;
   }
 
   .infoCardText {
     text-align: left;
+    /* max-width: 60%; */
   }
 
   .separator {
@@ -452,4 +478,5 @@
     text-align: center;
   }
 }
+
 /**********************************/
