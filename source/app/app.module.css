@@ -416,7 +416,7 @@
     align-items: center;
     padding: var(--mediumSpacing);
     /* border: 1px solid red; */
-    /* gap: 10%; */
+    gap: 15%;
   }
 
   .infoCard {
@@ -431,7 +431,9 @@
 
   .infoCardImage {
     /* border: 1px solid green; */
-    height: 20vh;
+    /* height: 20vh; */
+    width: 75%;
+    /* height: 100%; */
   }
 
   .infoCardText {
