@@ -15,8 +15,6 @@
   font-family: var(--fontFamily);
 }
 
-/* BUTTONS AND LINKS */
-
 .clickable {
   cursor: pointer;
   border-radius: 99px;

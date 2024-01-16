@@ -19,7 +19,7 @@ export function Header() {
         </div>
         <div className={button_container}>
           <button className={contact_button}>Contact us</button>
-          <button className={signup_button}>Join our waitlist!</button>
+          <button className={signup_button}>Join our waitlist</button>
         </div>
       </div>
     </div>

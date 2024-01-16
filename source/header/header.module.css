@@ -3,7 +3,9 @@
 }
 
 .container {
-  /* background: red; */
+  position: sticky;
+  top: 0;
+  background: white;
   display: flex;
   justify-content: center;
   height: var(--headerHeight);
