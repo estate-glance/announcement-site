@@ -7,6 +7,7 @@ import {
   signup_button,
   image_container,
 } from "./mobile.module.css";
+import mobile from "../../public/mobile.png";
 
 export function MobileSection() {
   return (
@@ -20,7 +21,9 @@ export function MobileSection() {
           </p>
           <button className={signup_button}>Join our waitlist</button>
         </div>
-        <div className={image_container} />
+        <div className={image_container}>
+          <img src={mobile} />
+        </div>
       </div>
     </div>
   );

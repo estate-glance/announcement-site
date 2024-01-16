@@ -1,6 +1,7 @@
 import { Header } from "../header/header";
 import { HeroSection } from "../hero/hero";
 import { MobileSection } from "../mobile/mobile";
+import { InfoSection } from "../info/info";
 
 export function App() {
   return (
@@ -8,6 +9,7 @@ export function App() {
       <Header />
       <HeroSection />
       <MobileSection />
+      <InfoSection />
     </>
   );
 }

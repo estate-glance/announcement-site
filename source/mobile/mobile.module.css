@@ -11,6 +11,7 @@
   width: min(100%, 1500px);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .text_container {
@@ -18,7 +19,6 @@
   flex-direction: column;
   gap: 32px;
   max-width: 40ch;
-  padding-top: 30vh;
 }
 
 .title {
@@ -37,11 +37,11 @@
 }
 
 .image_container {
-  flex: auto;
-  background-image: url("../../public/mobile.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
+  height: 100%;
+}
+
+.image_container img {
+  height: 100%;
 }
 
 @media (max-width: 900px) {
@@ -69,7 +69,7 @@
   }
 
   .image_container {
-    max-height: 50%;
-    background-position: center;
+    height: 50%;
+    text-align: center;
   }
 }
