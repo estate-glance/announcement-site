@@ -1,24 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 :root {
+  /* font */
   --fontFamily: "Quicksand", sans-serif;
-  --headerHeight: min(8rem, 10vh);
-  --widthLimit: 1500px;
-  --smallSpacing: 0.5rem;
-  --mediumSpacing: 1rem;
-  --h1FontSize: 4rem;
-  --h2FontSize: 3rem;
-  --h3FontSize: 2rem;
-  --h4FontSize: 1rem;
-  --b1FontWeight: 700;
-}
-
-@media (max-width: 900px) {
-  :root {
-    --h1FontSize: 2rem;
-    --h2FontSize: 1.75rem;
-    --h3FontSize: 1.125rem;
-  }
+  /* color */
+  --coral: 255, 120, 101;
+  --pink: 253, 191, 171;
 }
 
 * {
@@ -28,6 +15,31 @@
   font-family: var(--fontFamily);
 }
 
-html {
-  scroll-behavior: smooth;
+/* BUTTONS AND LINKS */
+
+.clickable {
+  cursor: pointer;
+  border-radius: 99px;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.bordered {
+  color: rgb(var(--pink));
+  border: 1px solid rgb(var(--pink));
+  background: white;
+}
+
+.filled {
+  color: white;
+  border: none;
+  background: rgb(var(--coral));
+}
+
+@media (max-width: 900px) {
+  .clickable {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
 }

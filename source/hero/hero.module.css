@@ -1,0 +1,68 @@
+.container {
+  height: calc(100vh - var(--headerHeight));
+  background-image: url("../../public/hero-desktop.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 32px;
+  margin-bottom: 100px;
+}
+
+.image_container {
+  height: 64px;
+}
+
+.image_container img {
+  height: 100%;
+}
+
+.text_container {
+  color: #3d5a80;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.button_container {
+  display: none;
+}
+
+.contact_button {
+  composes: bordered clickable from global;
+}
+
+.signup_button {
+  composes: filled clickable from global;
+}
+
+@media (max-width: 900px) {
+  .container {
+    background-image: url("../../public/hero-mobile.png");
+  }
+
+  .content {
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  .image_container {
+    height: 32px;
+  }
+
+  .text_container {
+    font-size: 32px;
+  }
+
+  .button_container {
+    display: inherit;
+    gap: 10px;
+    margin: 0 auto;
+  }
+}
