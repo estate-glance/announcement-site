@@ -18,8 +18,12 @@ export function Header() {
           <img src={fullLogo} />
         </div>
         <div className={button_container}>
-          <button className={contact_button}>Contact us</button>
-          <button className={signup_button}>Join our waitlist</button>
+          <a href="#forms">
+            <button className={contact_button}>Contact us</button>
+          </a>
+          <a href="#forms">
+            <button className={signup_button}>Join our waitlist</button>
+          </a>
         </div>
       </div>
     </div>

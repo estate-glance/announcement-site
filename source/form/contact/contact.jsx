@@ -9,7 +9,7 @@ import {
 
 export function ContactForm() {
   return (
-    <div className={content}>
+    <div className={content} id="contact_form">
       <p className={title}>Contact</p>
       <div className={grid}>
         <label className={label}>

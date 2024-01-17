@@ -15,6 +15,10 @@
   font-family: var(--fontFamily);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .clickable {
   cursor: pointer;
   border-radius: 99px;

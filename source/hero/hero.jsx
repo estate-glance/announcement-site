@@ -22,8 +22,12 @@ export function HeroSection() {
           <p>Through Images</p>
         </div>
         <div className={button_container}>
-          <button className={contact_button}>Contact</button>
-          <button className={signup_button}>Sign up</button>
+          <a href="#contact">
+            <button className={contact_button}>Contact us</button>
+          </a>
+          <a href="#forms">
+            <button className={signup_button}>Join our waitlist</button>
+          </a>
         </div>
       </div>
     </div>

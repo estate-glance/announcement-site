@@ -1,0 +1,54 @@
+.container {
+  height: 315px;
+  background: #3d5a80;
+  display: flex;
+  padding: 30px;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: min(100%, 1500px);
+  padding-top: 64px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.branding {
+  color: #d9d9d9;
+  font-size: 18px;
+  width: fit-content;
+}
+
+.branding img {
+  width: 250px;
+}
+
+.socials {
+  width: 250px;
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+.socials img {
+  margin-top: 12px;
+  width: 36px;
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    padding-top: 0px;
+    align-items: center;
+  }
+
+  .branding {
+    text-align: center;
+  }
+
+  .socials {
+    text-align: center;
+  }
+}

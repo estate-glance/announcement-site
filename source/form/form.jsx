@@ -13,7 +13,7 @@ import { ContactForm } from "./contact/contact";
 export function FormSection() {
   return (
     <>
-      <div className={container}>
+      <div className={container} id="forms">
         <div className={content}>
           <div className={signup_form_container}>
             <SignupForm />
@@ -24,7 +24,7 @@ export function FormSection() {
           </div>
         </div>
       </div>
-      <div className={mobile_contact_container}>
+      <div className={mobile_contact_container} id="contact">
         <div className={mobile_contact_content}>
           <ContactForm />
         </div>

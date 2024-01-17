@@ -19,7 +19,9 @@ export function MobileSection() {
             Search any element in a real estate listing using AI & Computer
             Vision.
           </p>
-          <button className={signup_button}>Join our waitlist</button>
+          <a href="#forms">
+            <button className={signup_button}>Join our waitlist</button>
+          </a>
         </div>
         <div className={image_container}>
           <img src={mobile} />
