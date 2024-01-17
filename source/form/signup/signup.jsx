@@ -6,6 +6,7 @@ import {
   signup_button,
   google_button,
 } from "./signup.module.css";
+import google from "../../../public/google.png";
 
 export function SignupForm() {
   return (
@@ -28,7 +29,12 @@ export function SignupForm() {
         />
       </label>
       <button className={signup_button}>Sign up</button>
-      <button className={google_button}>Continue with Google</button>
+      <button className={google_button}>
+        <div>
+          <img src={google} />
+          Continue with Google
+        </div>
+      </button>
     </div>
   );
 }

@@ -27,6 +27,18 @@
   composes: bordered clickable from global;
 }
 
+.google_button div {
+  display: flex;
+  gap: 16px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.google_button div img {
+  height: 100%;
+}
+
 @media (max-width: 900px) {
   .content {
     gap: 8px;
@@ -38,5 +50,9 @@
 
   .signup_button {
     margin-top: 16px;
+  }
+
+  .google_button div {
+    height: 18px;
   }
 }
