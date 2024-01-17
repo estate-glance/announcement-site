@@ -1,0 +1,42 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 16px;
+}
+
+.title {
+  composes: form_title from global;
+  margin-bottom: 32px;
+}
+
+.label {
+  composes: control_label from global;
+}
+
+.entry {
+  composes: control from global;
+}
+
+.signup_button {
+  composes: filled clickable from global;
+  margin-top: auto;
+}
+
+.google_button {
+  composes: bordered clickable from global;
+}
+
+@media (max-width: 900px) {
+  .content {
+    gap: 8px;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .signup_button {
+    margin-top: 16px;
+  }
+}

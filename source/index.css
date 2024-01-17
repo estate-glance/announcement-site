@@ -24,8 +24,8 @@
 }
 
 .bordered {
-  color: rgb(var(--pink));
-  border: 1px solid rgb(var(--pink));
+  color: rgb(var(--coral));
+  border: 1px solid rgb(var(--coral));
   background: white;
 }
 
@@ -35,9 +35,46 @@
   background: rgb(var(--coral));
 }
 
+.form_title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.control_label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.control {
+  display: block;
+  margin-top: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 99px;
+  padding: 20px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.control::placeholder {
+  color: #848484;
+}
+
 @media (max-width: 900px) {
   .clickable {
     padding: 12px 20px;
     font-size: 14px;
+  }
+
+  .form_title {
+    font-size: 24px;
+  }
+
+  .control_label {
+    font-size: 14px;
+  }
+
+  .control {
+    font-size: 12px;
+    padding: 14px;
   }
 }
