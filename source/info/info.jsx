@@ -12,6 +12,7 @@ import {
   card_description,
 } from "./info.module.css";
 import upload from "../../public/upload.png";
+
 import style from "../../public/style.png";
 import match from "../../public/match.png";
 
